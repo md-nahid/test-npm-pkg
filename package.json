@@ -1,0 +1,33 @@
+{
+  "name": "test-npm-pkg",
+  "version": "0.0.0",
+  "description": "A demo package for testing",
+  "keywords": [
+    "demo",
+    "typescript",
+    "test-npm-pkg"
+  ],
+  "homepage": "https://github.com/md-nahid/test-npm-pkg",
+  "bugs": {
+    "url": "https://github.com/md-nahid/test-npm-pkg/issues"
+  },
+  "author": "Nahid",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/md-nahid/test-npm-pkg.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "ci": "pnpm run build",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  }
+}
