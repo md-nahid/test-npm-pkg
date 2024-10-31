@@ -1,6 +1,6 @@
 {
   "name": "test-npm-pkg",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -28,7 +28,7 @@
     "test": "vitest run",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "local-release": "changeset version && changeset publish",
+    "release": "changeset version && changeset publish",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "ci": "pnpm run build && pnpm run check-format && pnpm run check-exports && pnpm run test"
   },
