@@ -1,11 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: {
-    index: './src/index.ts',
-    button: './src/button.tsx',
-    input: './src/input.tsx',
-  },
+  entry: ['./src/index.ts'],
   format: ['esm'],
   dts: true,
   clean: true,
