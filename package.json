@@ -1,6 +1,6 @@
 {
   "name": "rizzui-pkg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -17,7 +17,7 @@
     "url": "https://github.com/md-nahid/test-npm-pkg.git"
   },
   "files": [
-    "dist/**"
+    "/dist"
   ],
   "publishConfig": {
     "access": "public"
