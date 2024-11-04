@@ -1,6 +1,6 @@
 {
   "name": "rizzui-pkg",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -24,7 +24,10 @@
   },
   "type": "module",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "./dist/*.js",
+  "module": "./dist/*.js",
+  "types": "./dist/*.d.ts",
+  "sideEffects": false,
   "scripts": {
     "clean": "rm -rf dist",
     "build": "tsup",
