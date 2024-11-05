@@ -1,6 +1,6 @@
 {
   "name": "rizzui-pkg",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -24,17 +24,13 @@
     "directory": "dist"
   },
   "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "import": "./index.js",
-      "default": "./index.cjs"
-    }
+    "./*": "./dist/*"
   },
   "type": "module",
   "license": "MIT",
-  "main": "./index.cjs",
-  "module": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "clean": "rm -rf dist",
