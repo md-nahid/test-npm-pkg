@@ -17,14 +17,10 @@
     "url": "https://github.com/md-nahid/test-npm-pkg.git"
   },
   "files": [
-    "dist/*.js",
-    "dist/*.cjs",
-    "dist/*.d.ts",
-    "dist/*.d.cts"
+    "./*"
   ],
   "publishConfig": {
-    "access": "public",
-    "directory": "dist"
+    "access": "public"
   },
   "type": "module",
   "license": "MIT",
