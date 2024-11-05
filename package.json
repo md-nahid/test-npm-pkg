@@ -1,6 +1,6 @@
 {
   "name": "rizzui-pkg",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -23,7 +23,14 @@
     "access": "public"
   },
   "exports": {
-    "./*": "./dist/*"
+    "./*": {
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
+    },
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
   },
   "type": "module",
   "license": "MIT",
