@@ -54,5 +54,5 @@ export default defineConfig({
   sourcemap: false,
   treeshake: true,
   bundle: true,
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'node_modules'],
 });
