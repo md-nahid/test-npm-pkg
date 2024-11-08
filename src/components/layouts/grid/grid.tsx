@@ -1,6 +1,5 @@
 import React from 'react';
 import { cn } from 'src/lib/cn';
-import { GridCol } from './grid-col';
 
 const gridStyles = {
   columns: {
@@ -104,7 +103,7 @@ export interface GridProps extends React.HTMLAttributes<HTMLElement> {
   placeItems?: keyof typeof gridStyles.placeItems;
 }
 
-const Grid = React.forwardRef(
+export const Grid = React.forwardRef(
   (props: GridProps, forwardRef: React.Ref<HTMLElement>) => {
     const {
       as,
@@ -134,20 +133,14 @@ const Grid = React.forwardRef(
           justify && gridStyles.justify[justify],
           placeContent && gridStyles.placeContent[placeContent],
           placeItems && gridStyles.placeItems[placeItems],
-          className
+          className,
         )}
         {...rest}
       >
         {children}
       </Comp>
     );
-  }
+  },
 );
 
-const GridComponents = Object.assign(Grid, {
-  Col: GridCol,
-});
-
-GridComponents.displayName = 'Grid';
-
-export { GridComponents as Grid };
+Grid.displayName = 'Grid';

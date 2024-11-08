@@ -52,7 +52,7 @@ export function Highlight({
       className={cn(
         'highlight absolute -z-[1] rounded-md bg-muted/60 transition',
         visible ? 'opacity-100' : 'opacity-0',
-        className
+        className,
       )}
       style={{
         width: position.width,
