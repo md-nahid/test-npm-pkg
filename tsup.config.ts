@@ -47,7 +47,7 @@ export default defineConfig({
     'field-helper-text': 'src/components/field-helper-text.tsx',
     highlight: 'src/components/highlight.tsx',
   },
-  format: ['esm', 'cjs'],
+  format: ['esm'],
   dts: true,
   clean: true,
   minify: true,
@@ -55,4 +55,9 @@ export default defineConfig({
   treeshake: true,
   bundle: true,
   external: ['react', 'react-dom', 'node_modules'],
+  esbuildOptions(options) {
+    options.banner = {
+      js: '"use client"',
+    };
+  },
 });
