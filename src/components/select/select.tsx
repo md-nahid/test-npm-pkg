@@ -1,10 +1,12 @@
 import React, { Fragment, useMemo } from 'react';
-import { Listbox } from '@headlessui/react/dist/components/listbox/listbox';
-import { Label } from '@headlessui/react/dist/components/label/label';
-import { ListboxButton } from '@headlessui/react/dist/components/listbox-button/listbox-button';
-import { ListboxOptions } from '@headlessui/react/dist/components/listbox-options/listbox-options';
-import { ListboxOption } from '@headlessui/react/dist/components/listbox-option/listbox-option';
-import { Transition } from '@headlessui/react/dist/components/transition/transition';
+import {
+  Listbox,
+  Label,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+  Transition,
+} from '@headlessui/react';
 import { cn } from '../../lib/cn';
 import { ExtractProps } from '../../lib/extract-props';
 import { FieldError } from '../field-error-text';
