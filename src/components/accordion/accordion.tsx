@@ -38,7 +38,4 @@ export function Accordion({
   );
 }
 
-Accordion.Header = AccordionHeader;
-Accordion.Body = AccordionBody;
-
 Accordion.displayName = 'Accordion';

@@ -1,7 +1,6 @@
 import React from 'react';
 import { cn } from '../../lib/cn';
 import { Menu } from '@headlessui/react';
-import { DropdownItem } from './dropdown-item';
 import { DropdownMenu } from './dropdown-menu';
 import { DropdownTrigger } from './dropdown-trigger';
 import { DropdownProvider } from './dropdown-context';
@@ -40,7 +39,7 @@ export function Dropdown({
         className={cn(
           makeClassName(`dropdown-root inline-block`),
           'relative',
-          className
+          className,
         )}
       >
         {({ open }) => (
@@ -63,9 +62,5 @@ export function Dropdown({
     </DropdownProvider>
   );
 }
-
-Dropdown.Trigger = DropdownTrigger;
-Dropdown.Menu = DropdownMenu;
-Dropdown.Item = DropdownItem;
 
 Dropdown.displayName = 'Dropdown';

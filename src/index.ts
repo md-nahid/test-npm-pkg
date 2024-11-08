@@ -35,6 +35,12 @@ export * from './components/drawer/drawer';
 
 export * from './components/dropdown/dropdown';
 
+export * from './components/dropdown/dropdown-trigger';
+
+export * from './components/dropdown/dropdown-menu';
+
+export * from './components/dropdown/dropdown-item';
+
 export * from './components/empty/empty';
 
 export * from './components/upload/file-input';
@@ -52,6 +58,10 @@ export * from './components/password/password';
 export * from './components/pin-code/pin-code';
 
 export * from './components/popover/popover';
+
+export * from './components/popover/popover-trigger';
+
+export * from './components/popover/popover-content';
 
 export * from './components/progressbar/progressbar';
 
@@ -76,6 +86,10 @@ export * from './components/tooltip/tooltip';
 export * from './components/typography';
 
 export * from './components/accordion/accordion';
+
+export * from './components/accordion/accordion-header';
+
+export * from './components/accordion/accordion-body';
 
 export * from './components/select/select';
 
