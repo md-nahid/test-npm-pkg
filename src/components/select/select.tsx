@@ -1,12 +1,10 @@
 import React, { Fragment, useMemo } from 'react';
-import {
-  Listbox,
-  Label,
-  ListboxButton,
-  ListboxOptions,
-  ListboxOption,
-  Transition,
-} from '@headlessui/react';
+import { Listbox } from '@headlessui/react/dist/components/listbox/listbox';
+import { Label } from '@headlessui/react/dist/components/label/label';
+import { ListboxButton } from '@headlessui/react/dist/components/listbox-button/listbox-button';
+import { ListboxOptions } from '@headlessui/react/dist/components/listbox-options/listbox-options';
+import { ListboxOption } from '@headlessui/react/dist/components/listbox-option/listbox-option';
+import { Transition } from '@headlessui/react/dist/components/transition/transition';
 import { cn } from '../../lib/cn';
 import { ExtractProps } from '../../lib/extract-props';
 import { FieldError } from '../field-error-text';
@@ -219,7 +217,7 @@ export type SelectProps<SelectOption> = ExtractProps<typeof Listbox> & {
    * @returns The selected value from the specified option.
    */
   getOptionValue?: (
-    option: SelectOption
+    option: SelectOption,
   ) => SelectOption[keyof SelectOption] | SelectOption;
 };
 
@@ -289,9 +287,9 @@ export function Select<OptionType extends SelectOption>({
       disableDefaultFilter
         ? options
         : options.filter((item) =>
-            item[searchByKey].toLowerCase().includes(searchQuery.toLowerCase())
+            item[searchByKey].toLowerCase().includes(searchQuery.toLowerCase()),
           ),
-    [searchQuery, options]
+    [searchQuery, options],
   );
 
   return (
@@ -299,7 +297,7 @@ export function Select<OptionType extends SelectOption>({
       className={cn(
         makeClassName(`select-root`),
         'grid w-full grid-cols-1',
-        className
+        className,
       )}
     >
       <Listbox value={value} disabled={disabled} {...props}>
@@ -313,7 +311,7 @@ export function Select<OptionType extends SelectOption>({
                   labelStyles.size[size],
                   labelStyles.weight[labelWeight],
                   disabled && 'text-muted-foreground',
-                  labelClassName
+                  labelClassName,
                 )}
               >
                 {label}
@@ -332,7 +330,7 @@ export function Select<OptionType extends SelectOption>({
                   suffix && selectStyles.suffix.size[size],
                   disabled && selectStyles.disabled,
                   error && emptyValue && selectStyles.error,
-                  selectClassName
+                  selectClassName,
                 )}
                 autoFocus={autoFocus}
               >
@@ -341,7 +339,7 @@ export function Select<OptionType extends SelectOption>({
                     className={cn(
                       makeClassName(`select-prefix`),
                       'block whitespace-nowrap leading-normal',
-                      prefixClassName
+                      prefixClassName,
                     )}
                   >
                     {prefix}
@@ -354,7 +352,7 @@ export function Select<OptionType extends SelectOption>({
                     'block w-full truncate text-left rtl:text-right',
                     emptyValue && 'text-muted-foreground',
                     prefix && selectStyles.prefix.size[size],
-                    suffix && selectStyles.suffix.size[size]
+                    suffix && selectStyles.suffix.size[size],
                   )}
                 >
                   {emptyValue ? placeholder : displayValue(value)}
@@ -375,7 +373,7 @@ export function Select<OptionType extends SelectOption>({
                       makeClassName(`select-suffix`),
                       'whitespace-nowrap leading-normal transition-transform duration-200',
                       open && 'rotate-180',
-                      suffixClassName
+                      suffixClassName,
                     )}
                   >
                     {suffix}
@@ -408,7 +406,7 @@ export function Select<OptionType extends SelectOption>({
                         inPortal
                           ? optionListStyles.inPortal
                           : optionListStyles.notInPortal,
-                        dropdownClassName
+                        dropdownClassName,
                       )}
                     >
                       {searchable && (
@@ -416,7 +414,7 @@ export function Select<OptionType extends SelectOption>({
                           className={cn(
                             searchStyles.base,
                             stickySearch && searchStyles.stickySearch,
-                            searchContainerClassName
+                            searchContainerClassName,
                           )}
                         >
                           {searchPrefix ? (
@@ -425,7 +423,7 @@ export function Select<OptionType extends SelectOption>({
                                 makeClassName(`select-prefix`),
                                 searchStyles.prefix,
                                 searchPrefix && selectStyles.prefix.size[size],
-                                searchPrefixClassName
+                                searchPrefixClassName,
                               )}
                             >
                               {searchPrefix}
@@ -454,7 +452,7 @@ export function Select<OptionType extends SelectOption>({
                               selectStyles.rounded[rounded],
                               searchDisabled && selectStyles.disabled,
                               searchStyles.inputBase,
-                              searchClassName
+                              searchClassName,
                             )}
                             {...searchProps}
                           />
@@ -465,7 +463,7 @@ export function Select<OptionType extends SelectOption>({
                                 makeClassName(`select-suffix`),
                                 searchStyles.suffix,
                                 searchSuffix && selectStyles.suffix.size[size],
-                                searchSuffixClassName
+                                searchSuffixClassName,
                               )}
                             >
                               {searchSuffix}
@@ -487,7 +485,7 @@ export function Select<OptionType extends SelectOption>({
                               rounded && optionListStyles.item.rounded[rounded],
                               size && optionListStyles.item.size[size],
                               !option?.disabled && 'cursor-pointer',
-                              optionClassName
+                              optionClassName,
                             )
                           }
                           value={getOptionValue(option)}
@@ -495,7 +493,7 @@ export function Select<OptionType extends SelectOption>({
                           {({ selected }) => (
                             <div
                               className={cn(
-                                selected ? 'font-medium' : 'text-foreground'
+                                selected ? 'font-medium' : 'text-foreground',
                               )}
                             >
                               {getOptionDisplayValue(option)}
