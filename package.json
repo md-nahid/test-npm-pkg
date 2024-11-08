@@ -1,6 +1,6 @@
 {
   "name": "rizzui-pkg",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "A demo package for testing",
   "keywords": [
     "demo",
@@ -62,28 +62,16 @@
     "react-dom": ">=18"
   },
   "devDependencies": {
-    "@arethetypeswrong/cli": "^0.16.4",
     "@changesets/cli": "^2.27.9",
     "@floating-ui/react": "^0.26.27",
     "@headlessui/react": "^2.2.0",
-    "@rollup/plugin-commonjs": "^28.0.1",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.1",
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
     "autoprefixer": "^10.4.20",
-    "esbuild": "^0.24.0",
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "rollup": "^4.24.4",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-preserve-directives": "^0.4.0",
-    "rollup-plugin-typescript-paths": "^1.5.0",
-    "rollup-preserve-directives": "^1.1.2",
     "tailwindcss": "^3.4.14",
     "tsup": "^8.3.5",
     "typescript": "^5.6.3"
