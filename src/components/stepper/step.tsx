@@ -108,7 +108,7 @@ export interface StepProps
 const renderIconText = (
   index: number,
   status: StepProps['status'],
-  dot: StepProps['dot'],
+  dot: StepProps['dot']
 ) => {
   if (!dot && status === 'error') return <XIcon className="h-5 w-5" />;
   if (!dot && status === 'completed')
@@ -137,7 +137,7 @@ export function Step({
       className={cn(
         makeClassName(`step-root`),
         'group relative flex flex-1 last:flex-none',
-        className,
+        className
       )}
     >
       <div
@@ -145,7 +145,7 @@ export function Step({
           makeClassName(`step-line`),
           lineClasses.base,
           dot ? lineClasses.top.dot[size] : lineClasses.top.noDot[size],
-          status === 'completed' ? lineClasses.color[color] : 'bg-muted',
+          status === 'completed' ? lineClasses.color[color] : 'bg-muted'
         )}
       />
 
@@ -159,10 +159,10 @@ export function Step({
             ? circleClasses.waiting
             : cn(
                 circleClasses.variant[variant].base,
-                circleClasses.variant[variant].color[color],
+                circleClasses.variant[variant].color[color]
               ),
           dot && status === 'waiting' && dotClasses.waiting,
-          circleClassName,
+          circleClassName
         )}
       >
         {(!dot && icon) || renderIconText(index, status, dot)}
@@ -172,7 +172,7 @@ export function Step({
         className={cn(
           makeClassName(`step-container`),
           'ml-3 mt-0.5 flex flex-1 flex-col',
-          contentClassName,
+          contentClassName
         )}
       >
         <span className="rizzui-step-title flex items-center justify-center group-last:inline-block">
@@ -181,7 +181,7 @@ export function Step({
               makeClassName(`step-title`),
               '!mb-0 mr-2 text-base font-medium rtl:ml-2',
               status === 'waiting' ? 'text-gray-500' : 'text-gray-900',
-              titleClassName,
+              titleClassName
             )}
           >
             {title}
@@ -189,7 +189,7 @@ export function Step({
           <span
             className={cn(
               lineClasses.titleLine,
-              status === 'completed' ? lineClasses.color[color] : 'bg-muted',
+              status === 'completed' ? lineClasses.color[color] : 'bg-muted'
             )}
           />
         </span>
@@ -200,7 +200,7 @@ export function Step({
               makeClassName(`step-description`),
               'rizzui-step-description',
               status === 'in-progress' ? 'text-gray-900' : 'text-gray-500',
-              descriptionClassName,
+              descriptionClassName
             )}
           >
             {description}

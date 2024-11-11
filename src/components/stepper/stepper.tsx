@@ -1,5 +1,5 @@
 import React from 'react';
-import { type StepProps } from './step';
+import { Step, type StepProps } from './step';
 import { cn } from '../../lib/cn';
 import { makeClassName } from '../../lib/make-class-name';
 
@@ -75,7 +75,7 @@ export function Stepper({
         makeClassName(`stepper-root`),
         'flex justify-between space-x-4 rtl:space-x-0',
         direction === 'vertical' && 'flex-col space-x-0',
-        className,
+        className
       )}
     >
       {React.Children.map(children, (child, index) => {
@@ -95,15 +95,15 @@ export function Stepper({
             direction === 'vertical' &&
               (dot
                 ? containerClasses.verticalLine.left.dot[size]
-                : containerClasses.verticalLine.left.noDot[size]),
+                : containerClasses.verticalLine.left.noDot[size])
           ),
           circleClassName: cn(
             dot && direction === 'vertical' && 'mt-1.5',
-            dotClassName,
+            dotClassName
           ),
           contentClassName: cn(
             direction === 'vertical' && contentClasses.base,
-            contentClassName,
+            contentClassName
           ),
           titleClassName,
           descriptionClassName,
@@ -112,5 +112,7 @@ export function Stepper({
     </div>
   );
 }
+
+Stepper.Step = Step;
 
 Stepper.displayName = 'Stepper';

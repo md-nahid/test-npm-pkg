@@ -8,21 +8,21 @@ export interface TableProps extends React.ComponentPropsWithRef<'table'> {
   variant?: TableVariantProps;
 }
 
-export const Table = React.forwardRef<HTMLTableElement, TableProps>(
+const Table = React.forwardRef<HTMLTableElement, TableProps>(
   ({ className, variant = 'modern', ...props }, ref) => (
     <table
       ref={ref}
       className={cn(
         makeClassName(`table-root`),
         tableStyles.variants[variant],
-        className,
+        className
       )}
       {...props}
     />
-  ),
+  )
 );
 
-export const TableHeader = React.forwardRef<
+const TableHeader = React.forwardRef<
   HTMLTableSectionElement,
   React.ComponentPropsWithRef<'thead'>
 >(({ className, ...props }, ref) => (
@@ -33,7 +33,7 @@ export const TableHeader = React.forwardRef<
   />
 ));
 
-export const TableBody = React.forwardRef<
+const TableBody = React.forwardRef<
   HTMLTableSectionElement,
   React.ComponentPropsWithRef<'tbody'>
 >(({ className, ...props }, ref) => (
@@ -44,7 +44,7 @@ export const TableBody = React.forwardRef<
   />
 ));
 
-export const TableFooter = React.forwardRef<
+const TableFooter = React.forwardRef<
   HTMLTableSectionElement,
   React.ComponentPropsWithRef<'tfoot'>
 >(({ className, ...props }, ref) => (
@@ -55,7 +55,7 @@ export const TableFooter = React.forwardRef<
   />
 ));
 
-export const TableRow = React.forwardRef<
+const TableRow = React.forwardRef<
   HTMLTableRowElement,
   React.ComponentPropsWithRef<'tr'>
 >(({ className, ...props }, ref) => (
@@ -66,7 +66,7 @@ export const TableRow = React.forwardRef<
   />
 ));
 
-export const TableHead = React.forwardRef<
+const TableHead = React.forwardRef<
   HTMLTableCellElement,
   React.ComponentPropsWithRef<'th'>
 >(({ className, ...props }, ref) => (
@@ -77,7 +77,7 @@ export const TableHead = React.forwardRef<
   />
 ));
 
-export const TableCell = React.forwardRef<
+const TableCell = React.forwardRef<
   HTMLTableCellElement,
   React.ComponentPropsWithRef<'td'>
 >(({ className, ...props }, ref) => (
@@ -88,10 +88,22 @@ export const TableCell = React.forwardRef<
   />
 ));
 
-Table.displayName = 'Table';
 TableHeader.displayName = 'TableHeader';
 TableBody.displayName = 'TableBody';
 TableFooter.displayName = 'TableFooter';
 TableRow.displayName = 'TableRow';
 TableHead.displayName = 'TableHead';
 TableCell.displayName = 'TableCell';
+
+const TableWithComponents = Object.assign(Table, {
+  Header: TableHeader,
+  Body: TableBody,
+  Footer: TableFooter,
+  Row: TableRow,
+  Head: TableHead,
+  Cell: TableCell,
+});
+
+TableWithComponents.displayName = 'Table';
+
+export { TableWithComponents as Table };

@@ -1,3 +1,13 @@
 {
-  "cSpell.words": ["progressbar", "rizzui", "tailwindcss", "treeshake"]
+  "cSpell.words": [
+    "attw",
+    "clsx",
+    "headlessui",
+    "Nahid",
+    "progressbar",
+    "rizzui",
+    "tailwindcss",
+    "treeshake",
+    "tsup"
+  ]
 }

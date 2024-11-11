@@ -1,6 +1,6 @@
 import React from 'react';
 import { cn } from '../../lib/cn';
-import { Badge } from '../badge/badge';
+import { Badge } from '../badge';
 import { makeClassName } from '../../lib/make-class-name';
 import { roundedStyles } from '../../lib/rounded';
 
@@ -73,7 +73,7 @@ export const Announcement = ({
       announcementStyles.size[size],
       announcementStyles.rounded[rounded],
       announcementStyles.bgColor[bgColor],
-      className,
+      className
     )}
   >
     {startIcon}
@@ -95,7 +95,7 @@ export const Announcement = ({
           makeClassName(`announcement-highlighted-text`),
           'ml-2.5 font-medium rtl:mr-2.5',
           announcementStyles.color[color],
-          highlightedTextClassName,
+          highlightedTextClassName
         )}
       >
         {highlightedText}
@@ -105,7 +105,7 @@ export const Announcement = ({
     <span
       className={cn(
         makeClassName(`announcement-text`),
-        !highlightedText ? 'ml-2.5 rtl:mr-2.5' : 'ml-1 rtl:mr-1',
+        !highlightedText ? 'ml-2.5 rtl:mr-2.5' : 'ml-1 rtl:mr-1'
       )}
     >
       {children}

@@ -52,4 +52,7 @@ export function Popover({
   );
 }
 
+Popover.Trigger = PopoverTrigger;
+Popover.Content = PopoverContent;
+
 Popover.displayName = 'Popover';

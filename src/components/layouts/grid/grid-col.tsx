@@ -124,7 +124,7 @@ const gridColumnStyles = {
   },
 };
 
-export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
+export interface GridColumnProps extends React.HTMLAttributes<HTMLElement> {
   /* defines the component tag name to render */
   as?: React.ElementType;
   /* defines the gap between grid items */
@@ -146,7 +146,7 @@ export interface GridColProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 export const GridCol = React.forwardRef(
-  (props: GridColProps, forwardRef: React.Ref<HTMLElement>) => {
+  (props: GridColumnProps, forwardRef: React.Ref<HTMLElement>) => {
     const {
       as,
       order,
@@ -176,14 +176,14 @@ export const GridCol = React.forwardRef(
           rowSpan && gridColumnStyles.rowSpan[rowSpan],
           rowEnd && gridColumnStyles.rowEnd[rowEnd],
           order && gridColumnStyles.order[order],
-          className,
+          className
         )}
         {...rest}
       >
         {children}
       </Comp>
     );
-  },
+  }
 );
 
 GridCol.displayName = 'GridCol';
