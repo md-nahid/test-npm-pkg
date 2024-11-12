@@ -63,7 +63,7 @@ const letterWithColors = [
 
 function backgroundColor(signature: string) {
   const currObj = letterWithColors.filter((obj) =>
-    obj.string.includes(signature?.charAt(0).toLowerCase())
+    obj.string.includes(signature?.charAt(0).toLowerCase()),
   );
   return currObj[0]?.color ?? '#FF6847';
 }
@@ -108,7 +108,7 @@ export function Avatar({
           color && classes.color[color],
           onClick && 'cursor-pointer',
           'object-cover',
-          className
+          className,
         )}
         style={{
           width: avatarSize + 'px',
@@ -131,7 +131,7 @@ export function Avatar({
         color && classes.color[color],
         'font-semibold',
         onClick && 'cursor-pointer',
-        className
+        className,
       )}
       style={{
         width: avatarSize + 'px',
